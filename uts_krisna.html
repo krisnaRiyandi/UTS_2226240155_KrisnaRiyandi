@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=number] {
+            padding: 4px 10px;
+        }
+
+        button {
+            width: 12%;
+            padding: 10px;
+            margin-left: 10px;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+
+        #totalbayar {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function thr() {
+            var gajipokok = parseInt(document.getElementById('gajipokok').value);
+            let tunjangantetap = parseInt(document.getElementById('tunjangantetap').value);
+            let masakerja = parseInt(document.getElementById('masakerja').value);
+
+            var totalgaji = gajipokok + tunjangantetap;
+            var thr = 0;
+            var pph = 0;
+            if (masakerja >= 12) {
+                thr = totalgaji;
+
+            } else {
+                thr = (masakerja / 12) * totalgaji
+
+            }
+            if (totalgaji >= 4500000) {
+                pph = (5 / 100) * totalgaji;
+            } else {
+                pph = 0;
+            }
+
+            totalpembayaran = thr + pph;
+
+
+            document.getElementById('totalbayar').innerHTML = "Pembayaran THR :" + "<br>" + "THR : " + thr + "<br>" + 
+            "PPH : " + pph + "<br>" + "Total Pembayaran :" + totalpembayaran;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!--NPM : 2226240155-->
+    <!--NAMA : KRISNA RIYANDI-->
+    <h1>Pembayaran THR</h1>
+    Gaji Pokok : <input type="number" id="gajipokok" />
+    </br>
+    Tunjangan Tetap : <input type="number" id="tunjangantetap" />
+    </br>
+    Masa Kerja (Bulan) : <input type="number" id="masakerja" />
+    </br></br>
+    <button onclick="thr()" type="submit">Cek THR</button>
+    <p id="totalbayar">Hasil thr</p>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <h1>Look Into YourSelf</h1>
+    <p>
+        <b><u>Look into yourself</u></b>
+        <br>Release your heart free <br>
+        Look into yourself,<br>
+        and be the master of your destiny
+    </p>
+</body>
+
+</html>
